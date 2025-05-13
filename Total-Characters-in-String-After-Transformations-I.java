@@ -6,7 +6,6 @@ class Solution {
         for(int i = 0 ; i < n ;i++){
             count[s.charAt(i)-'a']++;
         }
-        // System.out.println(Arrays.toString(count));
         for(int i = 0 ; i < t ; i++){
             int z = count['z'-'a'];
             for(int j = 24 ; j >=0 ; j--){
@@ -14,7 +13,6 @@ class Solution {
             }
             count[0] = z;
             count[1] = (count[1] + z) % MOD;
-            // System.out.println(Arrays.toString(count));
         }
         int res = 0;
         for(int x : count){
